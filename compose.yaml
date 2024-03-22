@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=local_db'
+      - 'POSTGRES_PASSWORD=secret'
+      - 'POSTGRES_USER=user'
+    ports:
+      - '35432:5432'
+  rabbitmq:
+    image: 'rabbitmq:latest'
+    environment:
+      - 'RABBITMQ_DEFAULT_PASS=secret'
+      - 'RABBITMQ_DEFAULT_USER=myuser'
+    ports:
+      - '35672:5672'

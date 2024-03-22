@@ -13,18 +13,18 @@ import static org.assertj.core.api.Assertions.assertThat;
  * @since 2024
  */
 
-public class JooqTests extends SpringBootJooqSkeletonApplicationTests{
+ class JooqTests extends SpringBootJooqSkeletonApplicationTests{
     @Autowired
     DSLContext dslContext;
 
     @Test
     @Order(0)
     @DisplayName("Select One")
-    public void selectOne(){
+     void selectOne(){
         var one = dslContext.selectOne()
                 .fetch()
                 .into(Integer.class);
-        assertThat(one.size()).isEqualTo(1);
+        assertThat(one).hasSize(1);
         assertThat(one.get(0)).isEqualTo(1);
     }
 }

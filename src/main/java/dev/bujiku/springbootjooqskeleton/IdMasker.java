@@ -5,7 +5,6 @@ import at.favre.lib.idmask.*;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import tz.co.vodacom.security.oauth2authorizationserver.config.IdUnMaskException;
 
 /**
  * A component used to mask and unmask IDs for better security

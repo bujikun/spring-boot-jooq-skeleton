@@ -5,7 +5,6 @@ import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
-import org.springframework.transaction.annotation.Transactional;
 import org.testcontainers.containers.PostgreSQLContainer;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -14,7 +13,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Import(TestSpringBootJooqSkeletonApplication.class)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 @Slf4j
-@Transactional
 class SpringBootJooqSkeletonApplicationTests {
     @Autowired
     PostgreSQLContainer postgreSQLContainer;
